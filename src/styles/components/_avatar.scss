@@ -1,0 +1,36 @@
+.avatar {
+    position: relative;
+    width: 130px;
+    height: 87px;
+    overflow: hidden;
+
+    &:not(.is-inverted) {
+        -moz-transform: skew(-24deg, 0deg);
+        -webkit-transform: skew(-24deg, 0deg);
+        -o-transform: skew(-24deg, 0deg);
+        -ms-transform: skew(-24deg, 0deg);
+        transform: skew(-24deg, 0deg);
+        img {
+            -moz-transform: skew(24deg, 0deg);
+            -webkit-transform: skew(24deg, 0deg);
+            -o-transform: skew(24deg, 0deg);
+            -ms-transform: skew(24deg, 0deg);
+            transform: skew(24deg, 0deg);
+        }
+    }
+    &.is-inverted {
+        -moz-transform: skew(24deg, 0deg);
+        -webkit-transform: skew(24deg, 0deg);
+        -o-transform: skew(24deg, 0deg);
+        -ms-transform: skew(24deg, 0deg);
+        transform: skew(24deg, 0deg);
+        img {
+
+        -moz-transform: skew(-24deg, 0deg);
+        -webkit-transform: skew(-24deg, 0deg);
+        -o-transform: skew(-24deg, 0deg);
+        -ms-transform: skew(-24deg, 0deg);
+        transform: skew(-24deg, 0deg);
+        }
+    }
+}

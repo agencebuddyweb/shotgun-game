@@ -13,8 +13,11 @@
     <div class="container">
       <div class="columns is-align-items-center">
         <div class="column is-6 is-offset-3 has-text-centered">
-          <div>
-            <a href="" class="button px-8 is-warning has-shadow">Play</a>
+          <div
+            class="buttons is-flex is-align-items-center is-justify-content-center"
+          >
+            <a class="button px-8 is-dark has-shadow mx-1">Read the rules</a>
+            <a class="button px-8 is-warning has-shadow mx-1">Play</a>
           </div>
         </div>
       </div>
@@ -23,17 +26,72 @@
 </section>
 <div class="container">
   <div class="columns is-multiline">
-    <div class="column is-8 is-offset-2">
+    <div class="column is-8 is-offset-2 pb-0 has-text-light has-text-centered">
+      <h2 class="mt-4 has-text-weight-bold">Top 10 ranking</h2>
+    </div>
+    <div class="column is-8 is-offset-2 pb-0">
       <app-rank-item></app-rank-item>
     </div>
-    <div class="column is-8 is-offset-2">
+    <div class="column is-8 is-offset-2 pb-0">
       <app-rank-item></app-rank-item>
     </div>
-    <div class="column is-8 is-offset-2">
+    <div class="column is-8 is-offset-2 pb-0">
       <app-rank-item></app-rank-item>
     </div>
-    <div class="column is-8 is-offset-2">
+    <div class="column is-8 is-offset-2 pb-0">
       <app-rank-item></app-rank-item>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-6 is-offset-3">
+      <div class="card mt-4">
+        <div class="card-content m-8">
+          <div class="content has-text-light is-size-5">
+            <h2 class="has-text-light has-text-weight-bold" id="rules">
+              the rules of the game
+            </h2>
+            <h3 class="has-text-light">How our game works</h3>
+            <p>Shotgun bot is the biggest shotgun tournament.</p>
+            <p>
+              Each time a new challenger arrives, he faces all the bots 1 by 1.
+            </p>
+            <p>
+              A bot can't be updated. This means that you have to create a new
+              robot every time you want to win the tournament.
+            </p>
+
+            <h3 class="has-text-light">How does a duel work ?</h3>
+            <p>
+              Shotgun bot is a duel between 2 bots designed by anonymous
+              developers. The principle is to "kill" the opponent.
+            </p>
+            <p>
+              Each robot performs an action at the same time as its opponent.
+              The robots have then the choice between three actions:
+            </p>
+            <ul>
+              <li>
+                <strong>Reload:</strong> The robot recovers an ammunition.
+              </li>
+              <li>
+                <strong>Protect:</strong> The robot cannot die if it is shot.
+              </li>
+              <li>
+                <strong>Shoot:</strong> The robot shoots at its opponent. It is
+                impossible to shoot if no ammunition is available. It kills the
+                opponent if he reloads at that moment. If both robots shoot at
+                the same time, neither of them dies. In any case, you must start
+                by reloading, because you cannot shoot and therefore protection
+                is useless.
+              </li>
+            </ul>
+
+            <p>Will you be able to create the best shooting robot?</p>
+            <p><a class="button is-warning">Create a shooter bot</a></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
