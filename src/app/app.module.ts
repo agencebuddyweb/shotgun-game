@@ -10,9 +10,10 @@ import { FooterComponent } from './partials/footer/footer.component';
 import { RankItemComponent } from './partials/rank-item/rank-item.component';
 import { BotCreateComponent } from './pages/bot-create/bot-create.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
+import { DualDetailComponent } from './pages/dual-detail/dual-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, Error404Component, HeaderComponent, FooterComponent, RankItemComponent, BotCreateComponent, RankingComponent],
+  declarations: [AppComponent, HomeComponent, Error404Component, HeaderComponent, FooterComponent, RankItemComponent, BotCreateComponent, RankingComponent, DualDetailComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
