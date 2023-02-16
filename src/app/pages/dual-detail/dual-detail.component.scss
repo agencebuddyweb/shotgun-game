@@ -1,0 +1,118 @@
+
+@import '../../../styles/variables/all';
+@import '../../../../node_modules/bulma/sass/utilities/mixins';
+
+
+.bg-parallax {
+    position: absolute;
+    min-height: calc(100vh - #{$navbar-height} + #{$column-gap});
+    width: 100%;
+}
+.detail-wrapper {
+    min-height: calc(100vh - #{$navbar-height} + #{$column-gap});    
+}
+
+$backgrounds: 'bg', 'far', 'mid', 'close';
+@each $bg in $backgrounds {
+    .bg-parallax-#{$bg} {
+        background: url('/assets/images/parallax-#{$bg}.png') no-repeat bottom center / cover;
+    }
+}
+
+.dual, .bg-parallax  {
+    min-height: calc(100vh - #{$navbar-height} + #{$column-gap});
+}
+
+h1, .bot-name {
+    color: $warning-light;
+    font-weight: 600;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 1), -1px 1px 0 rgba(0, 0, 0, 1), 1px -1px 0 rgba(0, 0, 0, 1), -1px -1px 0 rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+.bot-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    .versus & {
+        max-width: 100%;
+        width: 100%;
+    }
+    .timeline & {
+        max-width: 114px;
+        width: 114px;
+    }
+}
+
+.versus {
+    > div {
+        width: 40%;
+    }
+}
+
+.result  {
+background-image: url('/assets/images/results.png');
+height: 44px;
+width: 44px;
+margin-right: 2rem;
+$results: ("shoot": 0, "protect": -90px, "reload": -180px, "won": -270px, "lost": -360px);
+
+@each $result, $position in $results {
+    &.#{$result} {
+        background-position: #{$position} 0;
+    }
+    }
+}
+
+.progress-bar {
+    height: 41px;
+    width: 100%;
+
+    .progress-bar__start {
+        position: relative;
+        height: 44px;
+        background-image: url('/assets/images/bar.svg');
+        background-position: -78px 0;
+        width: 40px;
+        
+    }
+    .progress-bar__end {
+        position: relative;
+        height: 44px;
+        background-image: url('/assets/images/bar.svg');
+        background-position: -114px 0;
+        width: 40px;
+    }
+    .progress-bar__center {
+        position: relative;
+        height: 41px;
+        width: calc(100% - 80px);
+        background-color: $grey-lighter;
+        border-top: 2px solid $dark;
+        border-bottom: 2px solid $dark;
+        box-shadow: 0 1px 0 $warning, 0 -1px 0 $warning;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+}
+
+.character {
+    width: 192px;
+    height: 192px;
+    &:not(.is-inverted) {
+        background-image: url('/assets/images/character-home.png');    
+        background-position: 0 0;
+       
+        &.is-dead {
+            background-position: -341px 0;
+        }
+    }
+
+    &.is-inverted {
+        background-image: url('/assets/images/character-away.png');    
+        background-position: -980px 0;
+        &.is-dead {
+            background-position: 0 0;
+        }
+    }
+}

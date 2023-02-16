@@ -4,7 +4,7 @@
 }
 html {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   text-rendering: optimizeLegibility;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -55,16 +55,7 @@ aside {
 }
 
 main {
-  min-height: calc(100vh + #{$gap} - 163.19px - #{$navbar-height});
-  padding-bottom: $gap;
-  @include touch {
-    --top-header-height : 28.61px;
-    min-height: calc(100vh + #{$gap} - 163.19px - #{$navbar-height} - var(--top-header-height));
-    margin-top: calc($column-gap + var(--top-header-height));
-  }
-  @include mobile {
-    --top-header-height : 21.83px;
-  }
+  min-height: calc(100vh + #{$column-gap} - #{$navbar-height});
 }
 
 .pointer {
