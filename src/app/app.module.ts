@@ -9,9 +9,10 @@ import { HeaderComponent } from './partials/header/header.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { RankItemComponent } from './partials/rank-item/rank-item.component';
 import { BotCreateComponent } from './pages/bot-create/bot-create.component';
+import { RankingComponent } from './pages/ranking/ranking.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, Error404Component, HeaderComponent, FooterComponent, RankItemComponent, BotCreateComponent],
+  declarations: [AppComponent, HomeComponent, Error404Component, HeaderComponent, FooterComponent, RankItemComponent, BotCreateComponent, RankingComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

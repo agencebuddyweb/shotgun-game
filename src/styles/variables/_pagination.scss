@@ -5,12 +5,43 @@ $pagination-disabled-color: rgba($grey, 0.75) !default;
 $pagination-ellipsis-color: rgba($grey, 0.75) !default;
 $pagination-shadow-inset: none;
 
-$pagination-hover-color: $link !default;
+$pagination-hover-color: $warning !default;
 
-$pagination-focus-color: $link !default;
+$pagination-focus-color: $warning !default;
 
-$pagination-active-color: $link !default;
+$pagination-active-color: $warning !default;
 
-$pagination-disabled-color: $grey-dark !default;
-$pagination-disabled-background-color: $grey-light !default;
-$pagination-disabled-border-color: $grey-light !default;
+$pagination-disabled-color: $grey !default;
+$pagination-disabled-background-color: $grey-dark !default;
+$pagination-disabled-border-color: $grey-dark !default;
+$pagination-color: $light !default;
+$pagination-border-color: $grey-dark !default;
+$pagination-current-color: $dark !default;
+$pagination-margin: -0.25rem !default;
+$pagination-min-width: $control-height !default;
+
+$pagination-item-font-size: 1em !default;
+$pagination-item-margin: 0.25rem !default;
+$pagination-item-padding-left: 0.5em !default;
+$pagination-item-padding-right: 0.5em !default;
+
+$pagination-nav-padding-left: 0.75em !default;
+$pagination-nav-padding-right: 0.75em !default;
+
+$pagination-hover-color: $warning !default;
+$pagination-hover-border-color: $warning !default;
+
+$pagination-focus-color: $warning !default;
+$pagination-focus-border-color: $warning !default;
+
+$pagination-active-color: $warning !default;
+$pagination-active-border-color: $warning !default;
+
+$pagination-disabled-color: $text-light !default;
+
+    $pagination-current-background-color: $warning !default;
+$pagination-current-border-color: $warning !default;
+
+$pagination-ellipsis-color: $grey-light !default;
+
+$pagination-shadow-inset: inset 0 1px 2px rgba($scheme-invert, 0.2) !default;
