@@ -17,7 +17,9 @@
             class="buttons is-flex is-align-items-center is-justify-content-center"
           >
             <a class="button px-8 is-dark has-shadow mx-1">Read the rules</a>
-            <a class="button px-8 is-warning has-shadow mx-1">Play</a>
+            <a routerLink="" class="button px-8 is-warning has-shadow mx-1"
+              >Play</a
+            >
           </div>
         </div>
       </div>
@@ -45,7 +47,8 @@
 
   <div class="columns">
     <div class="column is-6 is-offset-3">
-      <div class="card mt-4">
+      <div class="card mt-4 has-background">
+        <div class="has-background--honey"></div>
         <div class="card-content m-8">
           <div class="content has-text-light is-size-5">
             <h2 class="has-text-light has-text-weight-bold" id="rules">
@@ -86,9 +89,14 @@
                 is useless.
               </li>
             </ul>
-
-            <p>Will you be able to create the best shooting robot?</p>
-            <p><a class="button is-warning">Create a shooter bot</a></p>
+            <div
+              class="is-flex is-align-items-center is-justify-content-center"
+            >
+              <p class="mr-3 my-0">
+                Will you be able to create the best shooting robot?
+              </p>
+              <a class="button is-warning no-deco">Create a shooter bot</a>
+            </div>
           </div>
         </div>
       </div>

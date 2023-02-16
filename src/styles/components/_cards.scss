@@ -10,6 +10,7 @@
   background: linear-gradient(138.23deg, $dark -11.89%, $dark 49.23%, rgba(38, 38, 38, 0.5) 49.25%, rgba(38, 38, 38, 0.25) 109.23%);
   border: 2px solid $warning;
 
+  &:not(.has-background) {
   &:after {
     position: absolute;
     top: -2px;
@@ -32,5 +33,6 @@
     height: 27px;
     background: $dark;
     z-index: 1;
+  }
   }
 }
