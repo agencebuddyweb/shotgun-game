@@ -35,4 +35,8 @@
     z-index: 1;
   }
   }
+  .is-borderless   {
+    bpx-shadow: -26px -26px 51px rgba(37, 27, 27, 0.5), 26px 26px 51px rgba(7, 7, 9, 0.25);
+    border-radius: 10px;
+  }
 }

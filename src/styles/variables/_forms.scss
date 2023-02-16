@@ -3,25 +3,37 @@
 //controls
 $control-padding-vertical: 0.375em !default;
 $control-padding-horizontal: $column-gap !default;
-$input-background-color: $white !default;
-$input-placeholder-color: rgba($black-ter, 0.5) !default;
-$input-color: $black !default;
-$input-radius: 4px !default;
-$input-arrow: $primary-dark !default;
-$input-border-color: $grey !default;
-$input-icon-color: $black-ter !default;
-$input-icon-active-color: $link !default;
+$input-background-color: $grey-darker !default;
+$input-placeholder-color: rgba($warning-light, 0.5) !default;
+$input-color: $light !default;
+$input-radius: 1px !default;
+$input-arrow: $warning !default;
+$input-border-color: $warning !default;
+$input-icon-color: $warning !default;
+$input-icon-active-color: $warning !default;
+$file-cta-background-color: $grey-darker !default;
+$file-cta-color: $light !default;
+$file-border-color: $warning !default;
+$file-radius: $input-radius !default;
+
+$file-cta-background-color: $warning !default;
+$file-cta-color: $warning !default;
+$file-cta-hover-color: $warning !default;
+$file-cta-active-color: $warning !default;
+
+$file-name-border-color: $warning !default;
 
 $input-shadow: none !default;
 
-$input-hover-color: $black-ter !default;
-$input-hover-border-color: rgba($black-ter, 0.1) !default;
-$input-focus-color: $link !default;
+$input-hover-color: $warning !default;
+$input-hover-border-color: rgba($warning, 0.9) !default;
+$input-focus-color: $light !default;
+$input-focus-border-color: $warning-light !default;
 $input-focus-box-shadow-size: 0 3px 15px;
-$input-focus-box-shadow-color: rgba($black-ter, 0.1) !default;
+$input-focus-box-shadow-color: rgba($warning, 0.15) !default;
 
-$input-disabled-color: $grey !default;
-$input-disabled-background-color: $grey-light !default;
+$input-disabled-color: $grey-dark !default;
+$input-disabled-background-color: $grey !default;
 $input-disabled-border-color: $grey-dark !default;
 $input-disabled-placeholder-color: bulmaRgba(
   $input-disabled-color,
@@ -29,9 +41,4 @@ $input-disabled-placeholder-color: bulmaRgba(
 ) !default;
 
 
-//Custom variables
-$field-background: $white !default;
-$border: $grey-light !default;
-$checkbox-spacing: 24px !default;
-$checkbox-box-shadow-width: 0 0 0 4px !default;
 
