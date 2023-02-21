@@ -1,28 +1,28 @@
 import React from "react";
-
 import { Refine } from "@pankod/refine-core";
-
-import dataProvider from "@pankod/refine-simple-rest";
 import routerProvider from "@pankod/refine-react-router-v6";
-import { HeadlessInferencer } from "@pankod/refine-inferencer/headless";
+import dataProvider from "@pankod/refine-simple-rest";
+
+import { BotCreate } from "pages/bots";
+
+const API_URL = "https://api.fake-rest.refine.dev";
 
 
-function App() {
-  return (
-    <Refine
-      dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-      routerProvider={routerProvider}
-      resources={[
+
+const App: React.FC = () => {
+    return (
+        <Refine
+            routerProvider={routerProvider}
+            dataProvider={dataProvider(API_URL)}
+            resources={[
                 {
-                    name: "products",
-                    list: HeadlessInferencer,
-                    show: HeadlessInferencer,
-                    create: HeadlessInferencer,
-                    edit: HeadlessInferencer,
+                    name: "bots",
+                    create: BotCreate,
+                   
                 },
             ]}
-    />
-  );
-}
+        />
+    );
+};
 
 export default App;
