@@ -19,6 +19,15 @@ $backgrounds: 'bg', 'far', 'mid', 'close','street';
     margin-top: 2rem;
     position: relative;
     z-index: 1;
+    transition: background-color 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+        background-color: rgba($light, 0.15);
+    }
+
+    &.is-coming {
+        pointer-events: none;
+    }
 }
 
 .fight-list {
@@ -66,7 +75,7 @@ h1, .bot-name, .opponent, .challenger {
 .opponent, .challenger {
     width:calc(50% - 12px);
 
-    &.has-lost, .is-coming + & {
+    &.has-lost, .is-coming .icon-battle + & {
         img {
             opacity: 0.3;
         }
@@ -90,7 +99,7 @@ h1, .bot-name, .opponent, .challenger {
     height: 20px;
     transform: rotate(45deg);
     
-    .challenger:not(.has-lost) + &:not(.is-coming) {
+    .dual:not(.is-coming) .challenger:not(.has-lost) + & {
         background-color: $light;
         border: 2px solid $warning;
         box-shadow: 0 0 4px 2px rgba($warning, 0.5), 0 0 8px 4px rgba($warning, 0.3), 0 0 16px 8px rgba($warning, 0.2),  0 0 32px 16px rgba($warning, 0.1);
@@ -102,7 +111,7 @@ h1, .bot-name, .opponent, .challenger {
         box-shadow: 0 0 4px 2px rgba($danger, 0.5), 0 0 8px 4px rgba($danger, 0.3), 0 0 16px 8px rgba($danger, 0.2),  0 0 32px 16px rgba($danger, 0.1);
         
     }
-    &.is-coming {
+    .dual.is-coming & {
         background-color: rgba($white, 0.9);
         border: 2px solid $white;
         box-shadow: 0 0 4px 2px rgba($white, 0.5), 0 0 8px 4px rgba($white, 0.3), 0 0 16px 8px rgba($white, 0.2),  0 0 32px 16px rgba($white, 0.1);
