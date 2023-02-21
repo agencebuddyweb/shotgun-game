@@ -3,7 +3,7 @@ import { Refine } from '@pankod/refine-core'
 import routerProvider from '@pankod/refine-react-router-v6'
 import dataProvider from '@pankod/refine-simple-rest'
 
-import { BotCreate, BotList } from 'pages/bots'
+import { BotCreate, BotShow, BotList } from 'pages/bots'
 
 const API_URL = 'http://localhost:4000'
 
@@ -16,6 +16,7 @@ const App: React.FC = () => {
                 {
                     name: "bots",
                     create: BotCreate,
+                    show: BotShow,
                     list:BotList
                    
                 },
