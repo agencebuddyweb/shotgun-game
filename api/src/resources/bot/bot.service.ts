@@ -24,7 +24,7 @@ export class BotService {
   }
 
   async getBotById(id: number) {
-    return this.botRepository.findOne({
+    return this.botRepository.findOneOrFail({
       where: { id },
       relations: [
         'dualsAsChallenger',
@@ -36,10 +36,12 @@ export class BotService {
   }
 
   async createBot(botDto: CreateBotDto): Promise<Bot> {
+    // TODO: Validate source code.
     const bot: Bot = await this.botRepository.save(
       this.botRepository.create(botDto)
     )
 
+    // Start campaign against other bots and stop at first loss.
     const otherBots: Bot[] = await this.botRepository.find({
       where: { id: Not(bot.id) },
       order: {
@@ -47,13 +49,8 @@ export class BotService {
       }
     })
 
-    const campaignDuals: Dual[] = []
-
     for (const otherBot of otherBots) {
       const dual: Dual = await this.dualService.createDual(bot, otherBot)
-      console.log(dual.challengerWin, otherBot.ranking)
-
-      campaignDuals.push(dual)
 
       if (dual.challengerWin) {
         otherBot.ranking++

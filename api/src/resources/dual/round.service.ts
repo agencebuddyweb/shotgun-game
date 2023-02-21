@@ -73,7 +73,7 @@ export class RoundService {
       new Function(sourceCode) as (previousRounds: Round[]) => Action
 
     // TODO: Add a try/catch to catch errors in the source code. And adapt the source code to the POV (challenger or defender).
-    // Also detect if shot with no ammo or void return.
+    // TODO: Also detect if shot with no ammo or void return.
 
     return sourceCodeFunction(previousRounds)
   }

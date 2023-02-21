@@ -1,5 +1,7 @@
 import { useShow } from '@pankod/refine-core'
+
 import { IBot, IDual } from '../../../interfaces'
+import { DualShow } from '../../../partials/duals/show'
 
 export const BotShow: React.FC = () => {
   const { queryResult } = useShow<IBot>()
@@ -25,6 +27,7 @@ export const BotShow: React.FC = () => {
           <li>
             VS Rank N°{dual?.defender?.ranking} {dual?.defender?.name} -{' '}
             <strong>{dual.challengerWin ? 'WIN' : 'LOST'}</strong>
+            <DualShow dual={dual}></DualShow>
           </li>
         ))}
       </ul>
