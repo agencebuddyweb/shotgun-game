@@ -144,9 +144,12 @@ export const BotCreate: React.FC = () => {
                 <button className='button is-warning is-fullwidth mt-4 mb-4' onClick={() => handleSubmit('list')} type="button">
                 <span className="is-italic">Fight</span>
     </button>
-                
-                <a href="" className="no-deco back is-fullwidth" onClick={() => goBack()}>
-                    Go Back
+            
+                <a  href="" className="no-deco icon-text " onClick={() => goBack()}>
+                <span className="icon mr-1">
+                <i className="fa-solid fa-arrow-left "></i>
+                </span>
+                <span>Go Back</span>
                 </a>
               </div>
               {formLoading && <p>Loading</p>}
