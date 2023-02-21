@@ -17,6 +17,11 @@ Refine offers lots of out-of-the box functionality for rapid development, withou
 
 ## Available Scripts
 
+```bash
+    cd ui-refine
+    npm i
+```
+
 ### Running the development server.
 
 ```bash
@@ -41,7 +46,6 @@ To learn more about **refine**, please check out the [Documentation](https://ref
 
 - **REST Data Provider** [Docs](https://refine.dev/docs/core/providers/data-provider/#overview)
 - **React Router** [Docs](https://refine.dev/docs/core/providers/router-provider/)
-
 
 ## License
 

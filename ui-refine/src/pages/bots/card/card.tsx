@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { IBot } from 'interfaces'
-import BotAvatar from './avatar'
+import BotAvatar from '../avatar'
 import './card.scss'
 
 
