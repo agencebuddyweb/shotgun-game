@@ -18,7 +18,7 @@ export const BotShow: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="has-text-light">
       <h3>bot Details</h3>
       <p>id: {bot?.id}</p>
       <p>name: {bot?.name}</p>
