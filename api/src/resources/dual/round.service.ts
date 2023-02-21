@@ -69,11 +69,29 @@ export class RoundService {
   }
 
   calculateBotAction(sourceCode: string, previousRounds: Round[]): Action {
+    sourceCode = sourceCode
+      // Remove first line (function declaration).
+      .replace(/.*function.*/, '')
+      // Remove last curly bracket.
+      .replace(/}$/, '')
+
+      // Replace Action enum with the enum values.
+      .replace('Action.Protect', '0')
+      .replace('Action.Reload', '1')
+      .replace('Action.Shoot', '2')
+      // Replace previous rounds with the argument.
+      .replace('previousRounds', 'arguments[0]')
+
+    console.log(sourceCode)
+
     const sourceCodeFunction: (previousRounds: Round[]) => Action =
       new Function(sourceCode) as (previousRounds: Round[]) => Action
 
     // TODO: Add a try/catch to catch errors in the source code. And adapt the source code to the POV (challenger or defender).
     // TODO: Also detect if shot with no ammo or void return.
+    // TODO: Prevent the use of math.random() and other functions that could be used to cheat.
+
+    console.log(sourceCodeFunction(previousRounds))
 
     return sourceCodeFunction(previousRounds)
   }
