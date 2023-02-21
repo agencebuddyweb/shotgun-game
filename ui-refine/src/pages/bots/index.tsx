@@ -1,2 +1,4 @@
-export * from "./create/create";
-export * from "./card/card";
+export * from "../bots/create/create";
+export * from "../bots/card/card";
+export * from "./avatar";
+export * from "./list";
