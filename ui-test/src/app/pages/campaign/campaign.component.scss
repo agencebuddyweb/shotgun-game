@@ -75,9 +75,18 @@ h1, .bot-name, .opponent, .challenger {
 .opponent, .challenger {
     width:calc(50% - 12px);
 
+    i {
+        display: none;
+    }
+
     &.has-lost, .is-coming .icon-battle + & {
         img {
             opacity: 0.3;
+        }
+    }
+    &.has-lost {
+        i {
+            display: block;
         }
     }
  }
