@@ -4,7 +4,7 @@
 
 
 .bg-parallax {
-    position: absolute;
+    position: fixed;
     min-height: calc(100vh - #{$navbar-height} + #{$column-gap});
     width: 100%;
     filter: blur(8px);
@@ -13,5 +13,34 @@ $backgrounds: 'bg', 'far', 'mid', 'close','street';
 @each $bg in $backgrounds {
     .bg-parallax-#{$bg} {
         background: url('/assets/images/parallax-#{$bg}.png') no-repeat bottom center / cover;
+    }
+}
+
+.vertical-line {
+    position: relative;
+    background-image: url('/assets/images/line.png');
+    background-position: -48px 0;
+    background-repeat: repeat-y;
+    height: 2000px;
+    width: 24px;
+    margin-bottom: 24px;
+
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 17px;
+        background-image: url('/assets/images/line.png');
+        background-repeat: repeat-y;
+        background-position: -24px 0px;
+        z-index: 1;
+    }
+    &:before {
+        top: -17px;
+    }
+    &:after {
+        background-position: 0 0px;
+        bottom: -17px;
     }
 }
