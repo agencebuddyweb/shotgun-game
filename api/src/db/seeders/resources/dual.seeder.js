@@ -7,6 +7,7 @@ module.exports = {
     for (let i = 1; i <= count; i++) {
       dual = {
         id: i,
+        rounds: '[]',
         challengerWin: Math.floor(Math.random() * 2),
         challengerId: Math.floor(Math.random() * botCount) + 1,
         defenderId: Math.floor(Math.random() * botCount) + 1

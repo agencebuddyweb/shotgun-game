@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common'
-import { AppController } from './app.controller'
-import { AppService } from './app.service'
 import { DualModule } from './resources/dual/dual.module'
 import { BotModule } from './resources/bot/bot.module'
 import { TypeOrmModule } from '@nestjs/typeorm'
@@ -22,8 +20,6 @@ require('dotenv').config()
       migrations: [`${__dirname}/database/migrations/*{.ts,.js}`],
       synchronize: true
     })
-  ],
-  controllers: [AppController],
-  providers: [AppService]
+  ]
 })
 export class AppModule {}

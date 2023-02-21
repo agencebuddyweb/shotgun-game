@@ -9,7 +9,7 @@ module.exports = {
         id: i,
         name: `Bot ${i}`,
         avatar: `https://picsum.photos/seed/${i}/200/200`,
-        sourceCode: `test()`,
+        sourceCode: `return 1`,
         ranking: i
       }
 
