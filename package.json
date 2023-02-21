@@ -1,0 +1,24 @@
+{
+  "name": "shotgun-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:api": "cd api && npm run start:dev",
+    "seed": "cd api && npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agencebuddyweb/shotgun-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agencebuddyweb/shotgun-game/issues"
+  },
+  "homepage": "https://github.com/agencebuddyweb/shotgun-game#readme",
+  "dependencies": {
+    "mysql2": "^3.1.2",
+    "typeorm": "^0.3.12"
+  }
+}
