@@ -5,7 +5,7 @@ import dataProvider from '@pankod/refine-simple-rest'
 
 import { BotCreate } from 'pages/bots'
 
-const API_URL = 'https://api.fake-rest.refine.dev'
+const API_URL = 'http://localhost:4000'
 
 const App: React.FC = () => {
   return (
