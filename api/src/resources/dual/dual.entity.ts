@@ -13,17 +13,8 @@ export class Dual {
   @PrimaryGeneratedColumn()
   id: number
 
-  @Column()
-  name: string
-
-  @Column({ nullable: true })
-  avatar: string
-
-  @Column('text')
-  sourceCode: string
-
-  @Column('int', { default: 0 })
-  ranking: number
+  @Column({ type: 'tinyint', default: 0 })
+  challengerWin: boolean
 
   @ManyToOne(() => Bot, (bot) => bot.dualsAsChallenger)
   challenger: Bot

@@ -3,10 +3,11 @@ require('dotenv').config()
 const typeorm = require('typeorm')
 
 const botSeeder = require('./resources/bot.seeder')
-// const userSeeder = require('./resources/user.seeder')
+const dualSeeder = require('./resources/dual.seeder')
 
 ;(async () => {
   const botCount = 40
+  const dualCount = 100
 
   // Create connection
   const connection = await typeorm.createConnection({
@@ -23,7 +24,10 @@ const botSeeder = require('./resources/bot.seeder')
   await queryRunner.query('DELETE FROM duals')
   await queryRunner.query('DELETE FROM bots')
 
+  // Seed tables
+
   await botSeeder.seed(queryRunner, botCount)
+  await dualSeeder.seed(queryRunner, dualCount, botCount)
 
   await connection.close()
 })()
