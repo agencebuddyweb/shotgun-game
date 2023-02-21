@@ -27,7 +27,12 @@ export class BotService {
   }
 
   async createBot(botDto: CreateBotDto): Promise<Bot> {
-    const bot = this.botRepository.create(botDto)
-    return this.botRepository.save(bot)
+    const bot: Bot = await this.botRepository.save(
+      this.botRepository.create(botDto)
+    )
+
+    // TODO: Start a campaign for the new bot.
+
+    return bot
   }
 }

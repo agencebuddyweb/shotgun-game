@@ -1,4 +1,5 @@
 import {
+  AfterLoad,
   Column,
   CreateDateColumn,
   Entity,
@@ -12,6 +13,9 @@ import { Bot } from '../bot/bot.entity'
 export class Dual {
   @PrimaryGeneratedColumn()
   id: number
+
+  @Column('text')
+  rounds: string
 
   @Column({ type: 'tinyint', default: 0 })
   challengerWin: boolean
@@ -28,4 +32,11 @@ export class Dual {
 
   @UpdateDateColumn({ select: false })
   updatedAt: Date
+
+  // TODO: Parse rounds.
+  // @AfterLoad()
+  // parseRounds() {
+  //   console.log(this.rounds)
+  //   this.rounds = JSON.parse(this.rounds)
+  // }
 }
