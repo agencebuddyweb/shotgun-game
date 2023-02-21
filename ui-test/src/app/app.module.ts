@@ -11,9 +11,10 @@ import { RankItemComponent } from './partials/rank-item/rank-item.component';
 import { BotCreateComponent } from './pages/bot-create/bot-create.component';
 import { RankingComponent } from './pages/ranking/ranking.component';
 import { DualDetailComponent } from './pages/dual-detail/dual-detail.component';
+import { CampaignComponent } from './pages/campaign/campaign.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, Error404Component, HeaderComponent, FooterComponent, RankItemComponent, BotCreateComponent, RankingComponent, DualDetailComponent],
+  declarations: [AppComponent, HomeComponent, Error404Component, HeaderComponent, FooterComponent, RankItemComponent, BotCreateComponent, RankingComponent, DualDetailComponent, CampaignComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

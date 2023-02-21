@@ -1,0 +1,17 @@
+
+@import '../../../styles/variables/all';
+@import '../../../../node_modules/bulma/sass/utilities/mixins';
+
+
+.bg-parallax {
+    position: absolute;
+    min-height: calc(100vh - #{$navbar-height} + #{$column-gap});
+    width: 100%;
+    filter: blur(8px);
+}
+$backgrounds: 'bg', 'far', 'mid', 'close','street';
+@each $bg in $backgrounds {
+    .bg-parallax-#{$bg} {
+        background: url('/assets/images/parallax-#{$bg}.png') no-repeat bottom center / cover;
+    }
+}

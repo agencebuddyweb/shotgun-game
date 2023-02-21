@@ -1,0 +1,53 @@
+// Font-size
+
+$size-1: 4.883rem !default;
+$size-2: 3.906rem !default;
+$size-3: 3.125rem !default;
+$size-4: 2.5rem !default;
+$size-5: 2rem !default;
+$size-6: 1.6rem !default;
+$size-7: 1.28rem !default;
+$size-8: 1.024rem !default;
+
+// $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 !default;
+
+$size-1-touch: 3.125rem !default;
+$size-2-touch: 2.5rem !default;
+$size-3-touch: 2rem !default;
+$size-4-touch: 1.8rem !default;
+$size-5-touch: 1.6rem !default;
+
+// Typography
+
+$ff-sans: "Rajdhani", sans-serif !default;
+$ff-serif: "Rajdhani", sans-serif !default;
+
+$family-sans-serif: $ff-sans !default;
+$family-monospace: $ff-serif !default;
+$family-secondary: "Rubik", sans-serif !default;
+
+$master-size: $size-2 !default;
+$title-size: $size-1 !default;
+
+$title-weight: 700 !default;
+$title-weight-bold: 700 !default;
+$title-color: inherit !default;
+$title-line-height: 1.17 !default;
+
+$subtitle-size: $size-5 !default;
+$subtitle-color: $darkness !default;
+$subtitle-weight: 400 !default;
+
+$weight-light: 100 !default;
+$weight-normal: 400 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+
+$strong-color: inherit !default;
+
+// Body
+$body-font-size: $size-6 !default;
+$body-color: $darkness !default;
+
+// Custom variables
+$letter-spacing: 0.4px !default;
