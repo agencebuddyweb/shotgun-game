@@ -3,6 +3,11 @@
     width: 130px;
     height: 87px;
     overflow: hidden;
+    
+    &.is-small {
+        width: 65px;
+        height: 43px;
+    }
 
     &:not(.is-inverted) {
         -moz-transform: skew(-24deg, 0deg);
