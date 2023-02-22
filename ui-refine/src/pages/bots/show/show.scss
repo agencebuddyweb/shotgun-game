@@ -1,0 +1,131 @@
+
+@import '../../../styles/variables/all';
+@import '../../../../node_modules/bulma/sass/utilities/mixins';
+
+
+.bg-parallax {
+    position: fixed;
+    min-height: calc(100vh - #{$navbar-height} + #{$column-gap});
+    width: 100%;
+    filter: blur(8px);
+}
+$backgrounds: 'bg', 'far', 'mid', 'close';
+@each $bg in $backgrounds {
+    .bg-parallax-#{$bg} {
+        background: url('/assets/images/parallax-#{$bg}.png') no-repeat bottom center / cover;
+    }
+}
+.dual {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+        background-color: rgba($light, 0.15);
+    }
+
+    &.is-coming {
+        pointer-events: none;
+    }
+}
+
+.fight-list {
+    position: relative;
+    height: auto;
+    min-height: 500px;
+    padding-bottom: 6rem;
+
+}
+.vertical-line {
+    position: absolute;
+    background-image: url('/assets/images/line.png');
+    background-position: -48px 0;
+    background-repeat: repeat-y;
+    height: calc(100% - (17px * 2));
+    width: 24px;
+    margin-bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 17px;
+        background-image: url('/assets/images/line.png');
+        background-repeat: repeat-y;
+        background-position: -24px 0px;
+        z-index: 1;
+    }
+    &:before {
+        top: -17px;
+    }
+    &:after {
+        background-position: 0 0px;
+        bottom: -17px;
+    }
+}
+h1, .bot-name, .opponent, .challenger {
+    color: $warning-light;
+    font-weight: 600;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 1), -1px 1px 0 rgba(0, 0, 0, 1), 1px -1px 0 rgba(0, 0, 0, 1), -1px -1px 0 rgba(0, 0, 0, 1);
+    position: relative;
+}
+.opponent, .challenger {
+    width:calc(50% - 12px);
+
+    i {
+        display: none;
+    }
+
+    &.has-lost, .is-coming .icon-battle + & {
+        img {
+            opacity: 0.3;
+        }
+    }
+    &.has-lost {
+        i {
+            display: block;
+        }
+    }
+ }
+
+.challenger {
+    text-align: right;
+}
+
+.loose {
+    color: $danger;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-battle {
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    
+    .dual:not(.is-coming) .challenger:not(.has-lost) + & {
+        background-color: $light;
+        border: 2px solid $warning;
+        box-shadow: 0 0 4px 2px rgba($warning, 0.5), 0 0 8px 4px rgba($warning, 0.3), 0 0 16px 8px rgba($warning, 0.2),  0 0 32px 16px rgba($warning, 0.1);
+        
+    }
+    .challenger.has-lost + & {
+        background-color: $danger-light;
+        border: 2px solid $danger;
+        box-shadow: 0 0 4px 2px rgba($danger, 0.5), 0 0 8px 4px rgba($danger, 0.3), 0 0 16px 8px rgba($danger, 0.2),  0 0 32px 16px rgba($danger, 0.1);
+        
+    }
+    .dual.is-coming & {
+        background-color: rgba($white, 0.9);
+        border: 2px solid $white;
+        box-shadow: 0 0 4px 2px rgba($white, 0.5), 0 0 8px 4px rgba($white, 0.3), 0 0 16px 8px rgba($white, 0.2),  0 0 32px 16px rgba($white, 0.1);
+        
+    }
+}
+
