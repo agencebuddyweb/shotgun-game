@@ -8,7 +8,7 @@ export const BotCard: React.FC<any> = ({ bot }: { bot: IBot }) => {
 
   return (
   <div className="card has-background-dark has-text-light">
-    <a className="no-deco is-flex is-align-items-center is-justify-content-space-between px-4">
+    <a href={'/bots/show/' + bot.id} className="no-deco is-flex is-align-items-center is-justify-content-space-between px-4">
       <div className="is-flex is-align-items-center is-justify-content-center">
         <span className="is-size-3 mr-3 has-text-weight-bold">
           {bot.ranking}
