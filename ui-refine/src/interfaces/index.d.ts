@@ -1,22 +1,35 @@
 export interface IBot {
-  id: string;
-  creatorId: string;
-  name: string;
-  avatar: string;
-  sourceCode: string;
-  ranking?: number;
-  campaign?: ICampaign;
-}
+  id: number
+  creatorId: string
+  name: string
+  avatar: string
+  sourceCode: string
+  ranking?: number
+  campaign?: ICampaign
 
-export interface ICampaign {
-  date: string;
-  bot: IBot;
-  duals: IDual[];
+  dualsAsChallenger?: IDual[]
 }
 
 export interface IDual {
-  bot1: IBot;
-  bot2: IBot;
-  winner: IBot;
-  campaign: ICampaign;
+  id: number
+  rounds: IRound[]
+  challenger?: IBot
+  defender?: IBot
+  challengerWin: boolean
+  winner: IBot
+  campaign: ICampaign
+}
+
+export interface IRound {
+  number: number
+  challenger: {
+    action: any // TODO: Shared types
+    ammo: number
+    isKilled: boolean
+  }
+  defender: {
+    action: any // TODO: Shared types
+    ammo: number
+    isKilled: boolean
+  }
 }

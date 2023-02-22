@@ -1,13 +1,17 @@
 import { Injectable } from '@nestjs/common'
 import { InjectRepository } from '@nestjs/typeorm'
-import { Repository } from 'typeorm'
+import { Not, Repository } from 'typeorm'
+import { Dual } from '../dual/dual.entity'
+
+import { DualService } from '../dual/dual.service'
 import { Bot } from './bot.entity'
 import { CreateBotDto } from './dtos/create-bot.dto'
 
 @Injectable()
 export class BotService {
   constructor(
-    @InjectRepository(Bot) private readonly botRepository: Repository<Bot>
+    @InjectRepository(Bot) private readonly botRepository: Repository<Bot>,
+    private readonly dualService: DualService
   ) {}
 
   async getBots() {
@@ -20,18 +24,44 @@ export class BotService {
   }
 
   async getBotById(id: number) {
-    return this.botRepository.findOne({
+    return this.botRepository.findOneOrFail({
       where: { id },
-      relations: ['dualsAsChallenger', 'dualsAsDefender']
+      relations: [
+        'dualsAsChallenger',
+        'dualsAsDefender',
+        'dualsAsChallenger.defender',
+        'dualsAsDefender.challenger'
+      ]
     })
   }
 
   async createBot(botDto: CreateBotDto): Promise<Bot> {
+    // TODO: Validate source code.
     const bot: Bot = await this.botRepository.save(
       this.botRepository.create(botDto)
     )
 
-    // TODO: Start a campaign for the new bot.
+    // Start campaign against other bots and stop at first loss.
+    const otherBots: Bot[] = await this.botRepository.find({
+      where: { id: Not(bot.id) },
+      order: {
+        ranking: 'DESC'
+      }
+    })
+
+    for (const otherBot of otherBots) {
+      const dual: Dual = await this.dualService.createDual(bot, otherBot)
+
+      if (dual.challengerWin) {
+        otherBot.ranking++
+        await this.botRepository.save(otherBot)
+      } else {
+        bot.ranking = otherBot.ranking + 1
+        await this.botRepository.save(bot)
+
+        break
+      }
+    }
 
     return bot
   }
