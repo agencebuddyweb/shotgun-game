@@ -33,10 +33,8 @@ export class Dual {
   @UpdateDateColumn({ select: false })
   updatedAt: Date
 
-  // TODO: Parse rounds.
-  // @AfterLoad()
-  // parseRounds() {
-  //   console.log(this.rounds)
-  //   this.rounds = JSON.parse(this.rounds)
-  // }
+  @AfterLoad()
+  parseRounds() {
+    this.rounds = JSON.parse(this.rounds)
+  }
 }

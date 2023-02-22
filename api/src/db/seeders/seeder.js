@@ -6,8 +6,8 @@ const botSeeder = require('./resources/bot.seeder')
 const dualSeeder = require('./resources/dual.seeder')
 
 ;(async () => {
-  const botCount = 40
-  const dualCount = 100
+  const botCount = 3
+  const dualCount = 0
 
   // Create connection
   const connection = await typeorm.createConnection({

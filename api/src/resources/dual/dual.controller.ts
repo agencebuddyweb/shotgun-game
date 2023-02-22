@@ -10,13 +10,4 @@ export class DualController {
     private readonly dualService: DualService,
     private readonly botService: BotService
   ) {}
-
-  // TODO: remove that temporary method.
-  @Post()
-  async createDummyDual(): Promise<Dual> {
-    const challenger: Bot = await this.botService.getBotById(1)
-    const defender: Bot = await this.botService.getBotById(2)
-
-    return this.dualService.createDual(challenger, defender)
-  }
 }

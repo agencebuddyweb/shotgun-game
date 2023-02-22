@@ -1,96 +1,223 @@
-<section class="dual">
+<section class="campaign">
   <div class="bg-parallax bg-parallax-bg"></div>
   <div class="bg-parallax bg-parallax-far"></div>
   <div class="bg-parallax bg-parallax-mid"></div>
   <div class="bg-parallax bg-parallax-close"></div>
   <div class="bg-parallax bg-blur"></div>
-
-  <div class="container">
-    <div class="columns is-multiline">
-      <div class="column is-12">
-        <div
-          class="is-flex is-fullwidth is-align-items-center is-justify-content-center mt-2 versus"
-        >
+  <div class="campaign-wrapper">
+    <div class="container has-text-light">
+      <div class="columns is-multiline">
+        <div class="column is-12">
           <div
-            class="is-flex is-align-items-center is-justify-content-flex-end"
+            class="is-flex is-align-items-center is-justify-content-flex-start pt-4 pl-3"
           >
-            <span class="bot-name is-size-4 mr-5 has-text-right">MyBot</span>
             <figure class="avatar is-bordered">
               <img src="./assets/images/avatar-test-01.png" alt="" />
+              <i class="fa-solid fa-x is-size-3 has-text-danger loose"></i>
             </figure>
-          </div>
-          <img src="./assets/images/vs.svg" alt="" class="mx-6" />
-          <div
-            class="is-flex is-align-items-center is-justify-content-flex-start"
-          >
-            <figure class="avatar is-inverted is-bordered">
-              <img src="./assets/images/avatar-test-02.png" alt="" />
-            </figure>
-            <span class="bot-name is-size-4 ml-5">N. Romanof</span>
+            <span
+              class="bot-name is-size-4 ml-5 has-text-right has-text-weight-bold"
+              >MyBot</span
+            >
           </div>
         </div>
-        <div
-          class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center is-fullwidth has-text-centered"
-        >
-          <h1 class="has-text-centered">Stage 1</h1>
-          <img src="./assets/images/stage-line.svg" />
+        <div class="column is-12">
+          <p>Created on March 12th, 2023 at 02:03 p.m.</p>
         </div>
       </div>
-      <div class="column is-12">
-        <div
-          class="is-flex is-flex-direction-column is-justify-content-flex-start is-align-items-flex-start timeline my-4"
-        >
+
+      <div class="columns is-multiline">
+        <div class="column is-12">
           <div
-            class="is-flex is-justify-content-flex-start is-align-items-flex-start"
+            class="is-flex is-fullwidth is-align-items-center is-justify-content-fles-end fight-list is-flex-direction-column-reverse"
           >
-            <span class="bot-name is-size-4 mr-5">MyBot</span>
-            <div class="result shoot"></div>
-            <div class="result protect"></div>
-            <div class="result reload"></div>
-            <div class="result won"></div>
-            <div class="result lost"></div>
+            <div class="vertical-line"></div>
+
+            <a
+              class="dual is-fullwidth is-flex is-align-items-center is-justify-content-center"
+            >
+              <div class="challenger">
+                <span class="is-size-5">You won</span>
+              </div>
+              <span class="icon-battle mx-4"></span>
+              <div class="opponent has-lost">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-flex-start"
+                >
+                  <figure class="avatar is-small is-bordered">
+                    <img src="./assets/images/avatar-test-01.png" alt="" />
+                    <i
+                      class="fa-solid fa-x is-size-3 has-text-danger loose"
+                    ></i>
+                  </figure>
+                  <span
+                    class="bot-name is-size-5 ml-3 has-text-right has-text-weight-bold"
+                    >Opponent bot</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a
+              class="dual is-fullwidth is-flex is-align-items-center is-justify-content-center"
+            >
+              <div class="challenger">
+                <span class="is-size-5">Fighting...</span>
+              </div>
+              <span class="icon-battle mx-4"></span>
+              <div class="opponent">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-flex-start"
+                >
+                  <figure class="avatar is-small is-bordered">
+                    <img src="./assets/images/avatar-test-01.png" alt="" />
+                    <i
+                      class="fa-solid fa-x is-size-3 has-text-danger loose"
+                    ></i>
+                  </figure>
+                  <span
+                    class="bot-name is-size-5 ml-3 has-text-right has-text-weight-bold"
+                    >Opponent bot</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a
+              class="dual is-fullwidth is-flex is-align-items-center is-justify-content-center"
+            >
+              <div class="challenger has-lost">
+                <span class="is-size-5">You loose</span>
+              </div>
+              <span class="icon-battle mx-4"></span>
+              <div class="opponent">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-flex-start"
+                >
+                  <figure class="avatar is-small is-bordered">
+                    <img src="./assets/images/avatar-test-01.png" alt="" />
+                    <i
+                      class="fa-solid fa-x is-size-3 has-text-danger loose"
+                    ></i>
+                  </figure>
+                  <span
+                    class="bot-name is-size-5 ml-3 has-text-right has-text-weight-bold"
+                    >Opponent bot</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a
+              class="dual is-fullwidth is-flex is-align-items-center is-justify-content-center is-coming"
+            >
+              <div class="challenger"></div>
+              <span class="icon-battle mx-4"></span>
+              <div class="opponent">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-flex-start"
+                >
+                  <figure class="avatar is-small is-bordered">
+                    <img src="./assets/images/avatar-test-01.png" alt="" />
+                    <i
+                      class="fa-solid fa-x is-size-3 has-text-danger loose"
+                    ></i>
+                  </figure>
+                  <span
+                    class="bot-name is-size-5 ml-3 has-text-right has-text-weight-bold"
+                    >5th</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a
+              class="dual is-fullwidth is-flex is-align-items-center is-justify-content-center is-coming"
+            >
+              <div class="challenger"></div>
+              <span class="icon-battle mx-4"></span>
+              <div class="opponent">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-flex-start"
+                >
+                  <figure class="avatar is-small is-bordered">
+                    <img src="./assets/images/avatar-test-01.png" alt="" />
+                    <i
+                      class="fa-solid fa-x is-size-3 has-text-danger loose"
+                    ></i>
+                  </figure>
+                  <span
+                    class="bot-name is-size-5 ml-3 has-text-right has-text-weight-bold"
+                    >4th</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a
+              class="dual is-fullwidth is-flex is-align-items-center is-justify-content-center is-coming"
+            >
+              <div class="challenger"></div>
+              <span class="icon-battle mx-4"></span>
+              <div class="opponent">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-flex-start"
+                >
+                  <figure class="avatar is-small is-bordered">
+                    <img src="./assets/images/avatar-test-01.png" alt="" />
+                    <i
+                      class="fa-solid fa-x is-size-3 has-text-danger loose"
+                    ></i>
+                  </figure>
+                  <span
+                    class="bot-name is-size-5 ml-3 has-text-right has-text-weight-bold"
+                    >3rd</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a
+              class="dual is-fullwidth is-flex is-align-items-center is-justify-content-center is-coming"
+            >
+              <div class="challenger"></div>
+              <span class="icon-battle mx-4"></span>
+              <div class="opponent">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-flex-start"
+                >
+                  <figure class="avatar is-small is-bordered">
+                    <img src="./assets/images/avatar-test-01.png" alt="" />
+                    <i
+                      class="fa-solid fa-x is-size-3 has-text-danger loose"
+                    ></i>
+                  </figure>
+                  <span
+                    class="bot-name is-size-5 ml-3 has-text-right has-text-weight-bold"
+                    >2nd</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a
+              class="dual is-fullwidth is-flex is-align-items-center is-justify-content-center is-coming"
+            >
+              <div class="challenger"></div>
+              <span class="icon-battle mx-4"></span>
+              <div class="opponent">
+                <div
+                  class="is-flex is-align-items-center is-justify-content-flex-start"
+                >
+                  <figure class="avatar is-small is-bordered">
+                    <img src="./assets/images/avatar-test-01.png" alt="" />
+                    <i
+                      class="fa-solid fa-x is-size-3 has-text-danger loose"
+                    ></i>
+                  </figure>
+                  <span
+                    class="bot-name is-size-5 ml-3 has-text-right has-text-weight-bold"
+                    >1st</span
+                  >
+                </div>
+              </div>
+            </a>
           </div>
-          <div class="is-flex progress-bar my-2">
-            <div class="progress-bar__start"></div>
-            <div class="progress-bar__center"></div>
-            <div class="progress-bar__end"></div>
-          </div>
-          <div
-            class="is-flex is-justify-content-flex-start is-align-items-flex-start"
-          >
-            <span class="bot-name is-size-4 mr-5">N. Romanoff</span>
-            <div class="result shoot"></div>
-            <div class="result protect"></div>
-            <div class="result reload"></div>
-            <div class="result won"></div>
-            <div class="result lost"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="columns mt-10">
-      <div class="column is-12">
-        <div
-          class="is-flex is-fullwidth is-align-items-center is-justify-content-space-evenly mt-2 characters"
-        >
-          <div class="character is-dead"></div>
-          <div class="character is-inverted"></div>
         </div>
       </div>
     </div>
   </div>
-  <audio autoplay>
-    <source src="./assets/sounds/game-over.ogg" type="audio/ogg" />
-
-    <source src="./assets/sounds/game-over.mp3" type="audio/mpeg" />
-
-    Your browser does not support the audio element.
-  </audio>
-  <audio autoplay>
-    <source src="./assets/sounds/win.ogg" type="audio/ogg" />
-
-    <source src="./assets/sounds/win.mp3" type="audio/mpeg" />
-
-    Your browser does not support the audio element.
-  </audio>
 </section>

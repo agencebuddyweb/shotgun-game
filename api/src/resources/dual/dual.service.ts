@@ -20,8 +20,6 @@ export class DualService {
       defender.sourceCode
     )
 
-    console.log(rounds)
-
     const dual: Dual = this.dualRepository.create({
       challenger,
       defender,
