@@ -4,16 +4,8 @@ import { IBot } from 'interfaces'
 import BotAvatar from '../avatar'
 import './card.scss'
 
-export const BotCard: React.FC = () => {
-  const bot = {
-    // TODO: remove this mock data
-    // id: 'string',
-    // creatorId: 'string',
-    // name: 'string',
-    // avatar: 'string',
-    // sourceCode: 'string',
-    // ranking: 1
-  } as IBot
+export const BotCard: React.FC<any> = ({ bot }: { bot: IBot }) => {
+
   return (
   <div className="card has-background-dark has-text-light">
     <a className="no-deco is-flex is-align-items-center is-justify-content-space-between px-4">
