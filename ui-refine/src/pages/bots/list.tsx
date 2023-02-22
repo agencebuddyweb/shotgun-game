@@ -1,5 +1,3 @@
-
-
 import { useList, HttpError } from "@pankod/refine-core";
 
 import { IBot } from "../../interfaces";
