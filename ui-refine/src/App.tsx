@@ -5,23 +5,41 @@ import dataProvider from '@pankod/refine-simple-rest'
 
 import { BotCreate, BotShow, BotList } from 'pages/bots'
 
+import { NavBar } from "partials/navbar/navbar";
+import About from './pages/about/about'
+
 const API_URL = 'http://localhost:4000'
 
 const App: React.FC = () => {
     return (
+        
         <Refine
-            routerProvider={routerProvider}
-            dataProvider={dataProvider(API_URL)}
+         dataProvider={dataProvider(API_URL)}
+            routerProvider={{
+                ...routerProvider,
+                routes: [
+                    {
+                        element: <About/>,
+                        path: "/about-us",
+                        layout: true
+                    },
+                   
+                ] as typeof routerProvider.routes,
+            }}
             resources={[
                 {
                     name: "bots",
-                    create: BotCreate,
                     show: BotShow,
-                    list:BotList
-                   
+                    create: BotCreate,
+                    list:BotList   
                 },
             ]}
+            Layout={NavBar}
         />
+        
+       
+       
+
     );
 };
 
