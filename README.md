@@ -4,9 +4,12 @@
 
 ### API
 
-- `cd api`
-- `cp .env.example .env`
-- `npm i`
+```
+cd api
+cp .env.example .env
+npm i
+```
+
 - Create mySQL "shotgun" Database
 
 ### UI Test
